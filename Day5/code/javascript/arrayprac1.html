@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        function f1(){
+    let r=parseInt(document.getElementById("n1").value) 
+    let s=parseInt(document.getElementById("n2").value) 
+    let t=parseInt(document.getElementById("n3").value)
+    let v=parseInt(document.getElementById("n4").value)
+    console.log(r)
+     var arr =[r,s,t,v]
+     arr.sort((x1,x2)=>{
+        if(x1>x2) 
+        return 1
+        if (x2>x1)
+        return -1
+    else 
+    return 0
+     })
+  console.log("after sorting",arr)
+    document.getElementById("i1").innerHTML=arr
+        }
+    </script>
+    <title>Document</title>
+</head>
+<body>
+   <h5>Enter in textfield</h5>
+   <input type="number"  id="n1" onblur="f1()">
+   <input type="number"  id="n2" onblur="f1()">
+   <input type="number"  id="n3" onblur="f1()">
+   <input type="number"  id="n4" onblur="f1()">
+   <p id="i1"></p>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+<html>
+  <head>
+    <script>
+ function currency(){
+    let tocurrency=document.getElementById("b1").checked
+    let frcurrency= parseInt(document.getElementById("frcurrency").value) 
+    
+    let  e1=parseInt(document.getElementById("e1").value)
+    let amount= parseFloat(document.getElementById("amountplaceholder").value)
+   let s=e1
+    
+    let result
+
+    switch(frcurrency){
+        case "Euro" : result= s * amount;break;
+        case "dollar":  result=83.36*amount;break;
+    }
+
+    let outputstr = `<i> ${s} ${"+"} ${amount} = ${result} </i>`
+    document.getElementById("sp1").innerHTML=outputstr
+     console.log(amount)
+     console.log(s)
+
+ }
+    </script>
+  </head>
+  <body>
+    <title> Currency converter</title>
+    <label > from Currency</label>
+    <select id="frcurrency">
+        <option value>select option</option>
+        <option value="Eur">Euro</option>
+        <option value="dollar">dollar</option>
+        <option value="yen">yenn</option>
+        <option value="pound">pound</option>
+        <option value="india">rupess</option>
+    </select>
+    <br>
+    <br>
+    Amount: <input type="number" id="amountplaceholder">
+    euro amount : <input type="number" id="e1">
+    <br>
+    <br>
+    <label >to currency</label>
+    INR conversion : <input type="checkbox" onclick="currency()">
+     result:<p> <span  id="sp1"></span></p>
+  </body>
+</html>

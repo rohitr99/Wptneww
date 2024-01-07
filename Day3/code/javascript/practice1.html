@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <script>
+    function f1(){
+        let s=(document.getElementById("n1")).value 
+        console.log(s)
+        let r=document.getElementById("r1").checked 
+        let regex="/^[+91]/-[0-9]{10}/"
+       let rutik= s.match(regex)
+       console.log(rutik)
+        
+    }
+   </script>
+    <title>Document</title>
+</head>
+<body>
+    <fieldset>
+        <legend>registration form</legend>
+    </fieldset>
+    Phone no: <input type="number" id="n1">
+    <input type="radio" id="r1" onclick="f1()">
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <script>
+    function f1(){
+        let s= document.getElementById("i1").value 
+        console.log(s);
+       // let ustr= s.toUpperCase()
+        let lustr=s.toLowerCase()
+
+        document.getElementById("p1").innerHTML= lustr
+    }
+
+   </script>
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="i1" >
+    <input type="button" onclick="f1()">
+    <p id="p1"></p>
+    
+</body>
+</html>

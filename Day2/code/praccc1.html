@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        function Calculate(){
+            let P= parseInt(document.getElementById("n1").value)
+            console.log(P) 
+            let r= parseInt(document.getElementById("n2").value) 
+            console.log(r)
+            let op= document.getElementById("s1").value 
+            let result
+            switch(op){
+                case "+" : result=P+r;break;
+                case "-" : result=P-r;break;
+                case "/" : result=P/r;break;
+                case "*" : result=P*r;break;
+            }
+             result= `${P} ${op} ${r}=${result}`
+            document.getElementById("sp1").innerHTML= result
+
+
+        }
+
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="n1">
+    <input type="number" id="n2">
+    <select id="s1" onchange="Calculate()">
+        <option >select op</option>
+        <option>+</option>
+        <option>-</option>
+        <option>/</option>
+        <option>*</option>
+    </select>
+    <p>
+        <span id="sp1"></span>
+    </p>
+
+    
+</body>
+</html>
